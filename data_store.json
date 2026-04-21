@@ -1,0 +1,382 @@
+{
+  "health": {
+    "api_status": 200,
+    "cpu_usage": 73,
+    "simulated_anomaly": false,
+    "status": "UP",
+    "checked_at": "2026-04-20 13:01:32"
+  },
+  "incidents": [
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:00:32",
+      "resolved": true,
+      "id": 99
+    },
+    {
+      "type": "SIMULATED_ANOMALY",
+      "message": "A simulated system anomaly was detected.",
+      "severity": "MEDIUM",
+      "timestamp": "2026-04-20 13:00:38",
+      "resolved": true,
+      "id": 100
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:00:38",
+      "resolved": true,
+      "id": 101
+    },
+    {
+      "type": "SIMULATED_ANOMALY",
+      "message": "A simulated system anomaly was detected.",
+      "severity": "MEDIUM",
+      "timestamp": "2026-04-20 13:00:44",
+      "resolved": true,
+      "id": 102
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:00:44",
+      "resolved": true,
+      "id": 103
+    },
+    {
+      "type": "API_FAILURE",
+      "message": "API returned a non-200 status code.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:00:49",
+      "resolved": true,
+      "id": 104
+    },
+    {
+      "type": "SIMULATED_ANOMALY",
+      "message": "A simulated system anomaly was detected.",
+      "severity": "MEDIUM",
+      "timestamp": "2026-04-20 13:00:49",
+      "resolved": true,
+      "id": 105
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:00:49",
+      "resolved": true,
+      "id": 106
+    },
+    {
+      "type": "API_FAILURE",
+      "message": "API returned a non-200 status code.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:00:54",
+      "resolved": true,
+      "id": 107
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:00:54",
+      "resolved": true,
+      "id": 108
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:01:01",
+      "resolved": true,
+      "id": 109
+    },
+    {
+      "type": "HIGH_CPU",
+      "message": "CPU usage is high at 92%.",
+      "severity": "MEDIUM",
+      "timestamp": "2026-04-20 13:01:08",
+      "resolved": true,
+      "id": 110
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:01:08",
+      "resolved": true,
+      "id": 111
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:01:14",
+      "resolved": true,
+      "id": 112
+    },
+    {
+      "type": "API_FAILURE",
+      "message": "API returned a non-200 status code.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:01:19",
+      "resolved": true,
+      "id": 113
+    },
+    {
+      "type": "SIMULATED_ANOMALY",
+      "message": "A simulated system anomaly was detected.",
+      "severity": "MEDIUM",
+      "timestamp": "2026-04-20 13:01:19",
+      "resolved": true,
+      "id": 114
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:01:19",
+      "resolved": true,
+      "id": 115
+    },
+    {
+      "type": "HIGH_CPU",
+      "message": "CPU usage is high at 95%.",
+      "severity": "MEDIUM",
+      "timestamp": "2026-04-20 13:01:25",
+      "resolved": true,
+      "id": 116
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:01:25",
+      "resolved": true,
+      "id": 117
+    },
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Multiple API failures happened in a short time window.",
+      "severity": "HIGH",
+      "timestamp": "2026-04-20 13:01:32",
+      "resolved": true,
+      "id": 118
+    }
+  ],
+  "actions": [
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:32"
+    },
+    {
+      "incident_type": "SIMULATED_ANOMALY",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:38"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:38"
+    },
+    {
+      "incident_type": "SIMULATED_ANOMALY",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:44"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:44"
+    },
+    {
+      "incident_type": "API_FAILURE",
+      "action": "Failed request retried successfully.",
+      "timestamp": "2026-04-20 13:00:49"
+    },
+    {
+      "incident_type": "SIMULATED_ANOMALY",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:49"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:49"
+    },
+    {
+      "incident_type": "API_FAILURE",
+      "action": "Failed request retried successfully.",
+      "timestamp": "2026-04-20 13:00:54"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:54"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:01"
+    },
+    {
+      "incident_type": "HIGH_CPU",
+      "action": "Cache cleared to reduce load.",
+      "timestamp": "2026-04-20 13:01:08"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:08"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:14"
+    },
+    {
+      "incident_type": "API_FAILURE",
+      "action": "Failed request retried successfully.",
+      "timestamp": "2026-04-20 13:01:19"
+    },
+    {
+      "incident_type": "SIMULATED_ANOMALY",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:19"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:19"
+    },
+    {
+      "incident_type": "HIGH_CPU",
+      "action": "Cache cleared to reduce load.",
+      "timestamp": "2026-04-20 13:01:25"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:25"
+    },
+    {
+      "incident_type": "HIGH_ERROR_RATE",
+      "action": "Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:32"
+    }
+  ],
+  "alerts": [
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:32"
+    },
+    {
+      "message": "A simulated system anomaly was detected. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:38"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:38"
+    },
+    {
+      "message": "A simulated system anomaly was detected. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:44"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:44"
+    },
+    {
+      "message": "API returned a non-200 status code. Failed request retried successfully.",
+      "timestamp": "2026-04-20 13:00:49"
+    },
+    {
+      "message": "A simulated system anomaly was detected. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:49"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:49"
+    },
+    {
+      "message": "API returned a non-200 status code. Failed request retried successfully.",
+      "timestamp": "2026-04-20 13:00:54"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:00:54"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:01"
+    },
+    {
+      "message": "CPU usage is high at 92%. Cache cleared to reduce load.",
+      "timestamp": "2026-04-20 13:01:08"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:08"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:14"
+    },
+    {
+      "message": "API returned a non-200 status code. Failed request retried successfully.",
+      "timestamp": "2026-04-20 13:01:19"
+    },
+    {
+      "message": "A simulated system anomaly was detected. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:19"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:19"
+    },
+    {
+      "message": "CPU usage is high at 95%. Cache cleared to reduce load.",
+      "timestamp": "2026-04-20 13:01:25"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:25"
+    },
+    {
+      "message": "Multiple API failures happened in a short time window. Service restarted successfully.",
+      "timestamp": "2026-04-20 13:01:32"
+    }
+  ],
+  "logs": [
+    "2026-04-20 08:00:10 INFO Starting monitoring cycle",
+    "2026-04-20 08:00:16 ERROR Connection failed while reaching database primary",
+    "2026-04-20 08:00:20 WARNING Request timeout for billing service",
+    "2026-04-20 08:00:28 ERROR Memory error while processing analytics batch",
+    "2026-04-20 08:00:35 INFO Retry scheduled for failed payment callback"
+  ],
+  "analysis": [
+    {
+      "error": "DB connection failed",
+      "cause": "Too many connections",
+      "severity": "HIGH",
+      "log_line": "2026-04-20 08:00:16 ERROR Connection failed while reaching database primary"
+    },
+    {
+      "error": "Service timeout",
+      "cause": "Downstream service is slow or unavailable",
+      "severity": "MEDIUM",
+      "log_line": "2026-04-20 08:00:20 WARNING Request timeout for billing service"
+    },
+    {
+      "error": "Memory error",
+      "cause": "Application may be using too much memory",
+      "severity": "HIGH",
+      "log_line": "2026-04-20 08:00:28 ERROR Memory error while processing analytics batch"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autonomous Incident Response System</title>
+    <meta http-equiv="refresh" content="5">
+    <style>
+        :root {
+            --bg: #eef3ea;
+            --panel: #ffffff;
+            --ink: #1d2a22;
+            --accent: #1f6f50;
+            --danger: #b33a3a;
+            --muted: #6c7a73;
+            --border: #d5dfd7;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, #dbe9d4 0, transparent 32%),
+                linear-gradient(135deg, #f4f8f0, #e7efe7 60%, #dde8dc);
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 32px 20px 48px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(31, 111, 80, 0.95), rgba(18, 57, 40, 0.9));
+            color: #f7fbf7;
+            padding: 28px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(18, 57, 40, 0.15);
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        .hero p {
+            margin: 0;
+            max-width: 720px;
+            line-height: 1.5;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin-top: 22px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 12px 30px rgba(64, 88, 72, 0.08);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-weight: bold;
+            letter-spacing: 0.04em;
+            background: {% if data.health.status == 'UP' %}#d6f0e4{% elif data.health.status == 'DOWN' %}#f7d8d8{% else %}#ece8c6{% endif %};
+            color: {% if data.health.status == 'DOWN' %}var(--danger){% else %}var(--accent){% endif %};
+        }
+
+        ul {
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.45;
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .wide {
+            margin-top: 18px;
+        }
+
+        .wide .card {
+            margin-bottom: 18px;
+        }
+
+        code {
+            background: #edf4ee;
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <section class="hero">
+            <h1>Autonomous Incident Response System</h1>
+            <p>The dashboard watches system health, detects abnormal behavior, analyzes logs, triggers simulated self-healing, and shows every alert in one place.</p>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <h2>System Health</h2>
+                <p><span class="status">{{ data.health.status }}</span></p>
+                <p>API Status: <strong>{{ data.health.api_status }}</strong></p>
+                <p>CPU Usage: <strong>{{ data.health.cpu_usage }}%</strong></p>
+                <p>Simulated Anomaly: <strong>{{ data.health.simulated_anomaly }}</strong></p>
+                <p class="muted">Last checked: {{ data.health.checked_at }}</p>
+            </article>
+
+            <article class="card">
+                <h2>Active Alerts</h2>
+                <ul>
+                    {% for alert in data.alerts[-5:]|reverse %}
+                        <li>{{ alert.timestamp }} - {{ alert.message }}</li>
+                    {% else %}
+                        <li>No alerts yet.</li>
+                    {% endfor %}
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>Actions Taken</h2>
+                <ul>
+                    {% for action in data.actions[-5:]|reverse %}
+                        <li>{{ action.timestamp }} - {{ action.action }}</li>
+                    {% else %}
+                        <li>No healing actions yet.</li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </section>
+
+        <section class="wide">
+            <article class="card">
+                <h2>Incidents</h2>
+                <ul>
+                    {% for incident in data.incidents|reverse %}
+                        <li>
+                            <strong>{{ incident.type }}</strong> ({{ incident.severity }}) at {{ incident.timestamp }}
+                            <br>
+                            {{ incident.message }}
+                        </li>
+                    {% else %}
+                        <li>No incidents recorded.</li>
+                    {% endfor %}
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>Log Analysis</h2>
+                <ul>
+                    {% for item in data.analysis|reverse %}
+                        <li>
+                            <strong>{{ item.error }}</strong> -> {{ item.cause }} [{{ item.severity }}]
+                            <br>
+                            <code>{{ item.log_line }}</code>
+                        </li>
+                    {% else %}
+                        <li>No matching error patterns found in <code>logs.txt</code>.</li>
+                    {% endfor %}
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>Recent Logs</h2>
+                <ul>
+                    {% for line in data.logs[-10:]|reverse %}
+                        <li><code>{{ line }}</code></li>
+                    {% else %}
+                        <li>No log lines available.</li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </section>
+    </div>
+</body>
+</html>
